@@ -25,6 +25,20 @@ class AddStar extends Component {
         )
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault();
+        console.log('submitting...', this.state.newStar);
+        
+        this.setState(
+            {
+                newStar: {
+                    name: '',
+                    magnitude: '',
+                }
+            }
+        )
+    }
+
     render() {
         return (
             <section>
@@ -32,7 +46,7 @@ class AddStar extends Component {
                 <form>
                     <input onChange={this.handleChangeFor('name')} value={this.state.newStar.name} type="text" placeholder="Name" />
                     <input onChange={this.handleChangeFor('magnitude')} value={this.state.newStar.magnitude} type="text" placeholder="Magnitude" />
-                    <input type="Submit" placeholder="Submit" />
+                    <input type="Submit" placeholder="Submit" onClick={this.handleSubmit}/>
                 </form>
             <p>Star {this.state.newStar.name} has a magnitude of {this.state.newStar.magnitude}.</p>
 
