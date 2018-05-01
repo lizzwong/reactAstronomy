@@ -12,10 +12,9 @@ class StarsList extends Component {
     render() {
         return (
             <section>
-                <h2>STAR LIST</h2>
-               <pre>{JSON.stringify (this.props.starsArray) }</pre>
+                <h2>Star List</h2>
                <ul>
-                   {this.props.starsArray.map( (star) => <li>{star}</li>) }
+                   {this.props.starsArray.map( (star, i) => <li key={i}>Star {star.name} has a magnitude of {star.magnitude}</li>) }
                </ul>
             </section>
         );
