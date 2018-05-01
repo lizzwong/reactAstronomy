@@ -13,7 +13,10 @@ class StarsList extends Component {
         return (
             <section>
                 <h2>STAR LIST</h2>
-               <pre>{JSON.stringify(this.props.starsArray)}</pre>
+               <pre>{JSON.stringify (this.props.starsArray) }</pre>
+               <ul>
+                   {this.props.starsArray.map( (star) => <li>{star}</li>) }
+               </ul>
             </section>
         );
     }
