@@ -4,7 +4,7 @@ import Header from '../Header/Header';
 import Stars from '../../pages/Stars/Stars';
 import Planets from '../../pages/Planets/Planets';
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class App extends Component {
 
@@ -15,6 +15,10 @@ class App extends Component {
       <Router>
       <div className="App">
         <Header title="React Astronomy"/>
+        
+          <div><Link to="/stars">Stars</Link></div>
+          <div><Link to="/planets">Planets</Link></div>
+        
         <Route path="/stars" component={Stars}/>
         <Route path="/planets" component={Planets}/>
       </div>
