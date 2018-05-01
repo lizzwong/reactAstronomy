@@ -49,7 +49,7 @@ class Stars extends Component {
     render() {
         return (
             <div >
-                <h2>Stars</h2>
+                
                 <AddStar newStar={this.state.newStar} handleChangeFor={this.handleChangeFor} handleSubmitStar={this.handleSubmitStar} />
                 <p>Star {this.state.newStar.name} has a magnitude of {this.state.newStar.magnitude}.</p>
                 <StarsList starsArray={this.state.starsArray} />
